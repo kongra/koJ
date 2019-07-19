@@ -1,3 +1,5 @@
+// Copyright (c) kongra
+// Created 2019-07-18
 package koJ;
 
 import java.util.List;
