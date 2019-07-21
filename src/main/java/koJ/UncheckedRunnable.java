@@ -1,8 +1,12 @@
 // Copyright (c) Konrad Grzanek
-// Created 2019-07-19
+// Created 19.07.19
 package koJ;
 
 public interface UncheckedRunnable extends Runnable {
+
+  static void unchecked(UncheckedRunnable body) {
+    body.run();
+  }
 
   void runThrowing() throws Throwable;
 

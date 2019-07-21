@@ -1,11 +1,15 @@
 // Copyright (c) Konrad Grzanek
-// Created 2019-07-19
+// Created 19.07.19
 package koJ;
 
 import java.util.function.Supplier;
 
 @FunctionalInterface
 public interface UncheckedSupplier<T> extends Supplier<T> {
+
+  static <T> T unchecked(UncheckedSupplier<T> supplier) {
+    return supplier.get();
+  }
 
   T getThrowing() throws Throwable;
 

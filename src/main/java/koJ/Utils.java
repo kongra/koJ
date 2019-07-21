@@ -1,5 +1,5 @@
 // Copyright (c) kongra
-// Created 2019-07-18
+// Created 18.07.19
 package koJ;
 
 public class Utils {
