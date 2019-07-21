@@ -2,8 +2,12 @@
 // Created 18.07.19
 package koJ;
 
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.Nullable;
+
 public class Utils {
 
+  @Contract(value = " -> fail", pure = true)
   private Utils() {
     throw new AssertionError();
   }
@@ -14,6 +18,8 @@ public class Utils {
    * <p>
    * <code>throw sneakyThrow( some exception );</code>
    */
+  @Nullable
+  @Contract("null -> fail")
   public static RuntimeException sneakyThrow(Throwable t) {
     // http://www.mail-archive.com/javaposse@googlegroups.com/msg05984.html
     if (t == null) throw new NullPointerException();
@@ -21,6 +27,7 @@ public class Utils {
     return null;
   }
 
+  @Contract("_ -> fail")
   @SuppressWarnings("unchecked")
   static private <T extends Throwable> void sneakyThrow0(Throwable t) throws T {
     throw (T) t;

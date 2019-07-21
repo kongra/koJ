@@ -2,6 +2,9 @@
 // Created 18.07.19
 package koJ;
 
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Objects;
 import java.util.function.Supplier;
 
@@ -11,14 +14,19 @@ public final class Delay<T> implements Supplier<T>, Deref<T>, Pending {
   private volatile Throwable exception;
   private volatile Supplier<T> supplier;
 
+  @Contract(pure = true)
   private Delay(Supplier<T> supplier) {
     this.supplier = supplier;
   }
 
+  @NotNull
+  @Contract(value = "_ -> new", pure = true)
   public static <T> Delay<T> delay(Supplier<T> supplier) {
     return new Delay<>(supplier);
   }
 
+  @NotNull
+  @Contract(value = "_ -> new", pure = true)
   public static <T> Delay<T> delayUnchecked(UncheckedSupplier<T> supplier) {
     return new Delay<>(supplier);
   }
@@ -54,6 +62,7 @@ public final class Delay<T> implements Supplier<T>, Deref<T>, Pending {
     return supplier == null;
   }
 
+  @NotNull
   @Override
   public String toString() {
     return "Delay{" +
@@ -62,6 +71,7 @@ public final class Delay<T> implements Supplier<T>, Deref<T>, Pending {
         + '}';
   }
 
+  @Contract(value = "null -> false", pure = true)
   @Override
   public boolean equals(Object o) {
     if (this == o) return true;

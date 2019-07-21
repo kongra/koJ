@@ -2,9 +2,11 @@
 // Created 19.07.19
 package koJ;
 
+import org.jetbrains.annotations.NotNull;
+
 public interface UncheckedRunnable extends Runnable {
 
-  static void unchecked(UncheckedRunnable body) {
+  static void unchecked(@NotNull UncheckedRunnable body) {
     body.run();
   }
 

@@ -2,6 +2,9 @@
 // Created 21.07.19
 package koJ;
 
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayDeque;
 import java.util.function.Supplier;
 
@@ -15,6 +18,8 @@ public class Dynvar<T> implements Deref<T> {
     this.initValue = initValue;
   }
 
+  @NotNull
+  @Contract("_ -> new")
   public static <T> Dynvar<T> initially(T value) {
     return new Dynvar<>(value);
   }
@@ -25,7 +30,7 @@ public class Dynvar<T> implements Deref<T> {
     return stack.isEmpty() ? initValue : stack.peek();
   }
 
-  public <S> S binding(T value, Supplier<S> supplier) {
+  public <S> S binding(T value, @NotNull Supplier<S> supplier) {
     var stack = localStacks.get();
     stack.push(value);
     try {
@@ -35,7 +40,7 @@ public class Dynvar<T> implements Deref<T> {
     }
   }
 
-  public void binding(T value, Runnable body) {
+  public void binding(T value, @NotNull Runnable body) {
     var stack = localStacks.get();
     stack.push(value);
     try {
@@ -45,7 +50,7 @@ public class Dynvar<T> implements Deref<T> {
     }
   }
 
-  public <S> S bindingUnchecked(T value, UncheckedSupplier<S> supplier) {
+  public <S> S bindingUnchecked(T value, @NotNull UncheckedSupplier<S> supplier) {
     var stack = localStacks.get();
     stack.push(value);
     try {
@@ -55,7 +60,7 @@ public class Dynvar<T> implements Deref<T> {
     }
   }
 
-  public void bindingUnchecked(T value, UncheckedRunnable body) {
+  public void bindingUnchecked(T value, @NotNull UncheckedRunnable body) {
     var stack = localStacks.get();
     stack.push(value);
     try {
