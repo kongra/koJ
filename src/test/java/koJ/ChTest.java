@@ -2,8 +2,8 @@ package koJ;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static koJ.Ch.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class ChTest {
 
@@ -16,23 +16,23 @@ class ChTest {
 
   @Test
   void chPos1() {
-    chPos((byte)1);
-    assertThrows(AssertionError.class, () -> chPos((byte)0));
-    assertThrows(AssertionError.class, () -> chPos((byte)-1));
+    chPos((byte) 1);
+    assertThrows(AssertionError.class, () -> chPos((byte) 0));
+    assertThrows(AssertionError.class, () -> chPos((byte) -1));
   }
 
   @Test
   void chPos2() {
-    chPos((short)1);
-    assertThrows(AssertionError.class, () -> chPos((short)0));
-    assertThrows(AssertionError.class, () -> chPos((short)-1));
+    chPos((short) 1);
+    assertThrows(AssertionError.class, () -> chPos((short) 0));
+    assertThrows(AssertionError.class, () -> chPos((short) -1));
   }
 
   @Test
   void chPos3() {
-    chPos((long)1);
-    assertThrows(AssertionError.class, () -> chPos((long)0));
-    assertThrows(AssertionError.class, () -> chPos((long)-1));
+    chPos((long) 1);
+    assertThrows(AssertionError.class, () -> chPos((long) 0));
+    assertThrows(AssertionError.class, () -> chPos((long) -1));
   }
 
   @Test
@@ -45,25 +45,25 @@ class ChTest {
 
   @Test
   void chNat1() {
-    chNat((byte)0);
-    chNat((byte)1);
-    assertThrows(AssertionError.class, () -> chNat((byte)-1));
+    chNat((byte) 0);
+    chNat((byte) 1);
+    assertThrows(AssertionError.class, () -> chNat((byte) -1));
     assertThrows(AssertionError.class, () -> chNat(Byte.MIN_VALUE));
   }
 
   @Test
   void chNat2() {
-    chNat((short)0);
-    chNat((short)1);
-    assertThrows(AssertionError.class, () -> chNat((short)-1));
+    chNat((short) 0);
+    chNat((short) 1);
+    assertThrows(AssertionError.class, () -> chNat((short) -1));
     assertThrows(AssertionError.class, () -> chNat(Short.MIN_VALUE));
   }
 
   @Test
   void chNat3() {
-    chNat((long)0);
-    chNat((long)1);
-    assertThrows(AssertionError.class, () -> chNat((long)-1));
+    chNat((long) 0);
+    chNat((long) 1);
+    assertThrows(AssertionError.class, () -> chNat((long) -1));
     assertThrows(AssertionError.class, () -> chNat(Long.MIN_VALUE));
   }
 

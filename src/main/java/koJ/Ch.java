@@ -7,6 +7,11 @@ import org.jetbrains.annotations.NotNull;
 
 public class Ch {
 
+  @Contract(value = " -> fail", pure = true)
+  private Ch() {
+    throw new AssertionError();
+  }
+
   @Contract(value = "_ -> param1", pure = true)
   public static byte chPos(byte b) {
     if (b > 0) return b;
@@ -59,11 +64,6 @@ public class Ch {
   public static String chNonBlank(@NotNull String s) {
     if (s.isBlank()) throw new AssertionError();
     return s;
-  }
-
-  @Contract(value = " -> fail", pure = true)
-  private Ch() {
-    throw new AssertionError();
   }
 
 }

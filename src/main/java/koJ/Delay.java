@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.Objects;
 import java.util.function.Supplier;
 
-public final class Delay<T> implements Supplier<T>, Deref<T>, Pending {
+public class Delay<T> implements Supplier<T>, Deref<T>, Pending {
 
   private volatile T value;
   private volatile Throwable exception;

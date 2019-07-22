@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import static koJ.Delay.delayUnchecked;
 import static koJ.UncheckedRunnable.unchecked;
 import static koJ.UncheckedSupplier.unchecked;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class UtilsTest {
 
@@ -22,33 +23,36 @@ class UtilsTest {
       return "www";
     });
 
-    System.out.println(s);
+    assertEquals(s, "www");
   }
 
   @Test
   void delay() {
     var value = delayUnchecked(() -> {
       Thread.sleep(100);
-      System.out.println("Finished long computations and ready to return");
       return 2;
     });
 
-    System.out.println(value);
-    System.out.println(value.deref());
-    System.out.println(value);
+    assertEquals(value.isPending(), true);
+    assertEquals(value.isRealized(), false);
+    assertEquals(value.deref(), 2);
+
+    assertEquals(value.isPending(), false);
+    assertEquals(value.isRealized(), true);
+    assertEquals(value.deref(), 2);
   }
 
   @Test
   void dynvar() {
     var s = Dynvar.initially("Aaa");
-    System.out.println(s.deref());
+    assertEquals(s.deref(), "Aaa");
     s.binding("Bbb", () -> {
-      System.out.println(s.deref());
+      assertEquals(s.deref(), "Bbb");
       s.binding("Ccc", () -> {
-        System.out.println(s.deref());
+        assertEquals(s.deref(), "Ccc");
       });
-      System.out.println(s.deref());
+      assertEquals(s.deref(), "Bbb");
     });
-    System.out.println(s.deref());
+    assertEquals(s.deref(), "Aaa");
   }
 }
