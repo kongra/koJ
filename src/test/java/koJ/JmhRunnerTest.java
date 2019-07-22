@@ -16,7 +16,9 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 public class JmhRunnerTest {
 
   private static final List<Class> BENCH_CLASSES = List.of(
-      ChBench.class
+      // ChBench.class
+      // StreamsBench.class
+      UncheckedBench.class
   );
 
   @Test

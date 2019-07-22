@@ -2,6 +2,7 @@
 // Created 18.07.19
 package koJ;
 
+import koJ.unchecked.UncheckedSupplier;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 

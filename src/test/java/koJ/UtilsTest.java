@@ -5,8 +5,8 @@ package koJ;
 import org.junit.jupiter.api.Test;
 
 import static koJ.Delay.delayUnchecked;
-import static koJ.UncheckedRunnable.unchecked;
-import static koJ.UncheckedSupplier.unchecked;
+import static koJ.unchecked.UncheckedRunnable.unchecked;
+import static koJ.unchecked.UncheckedSupplier.unchecked;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class UtilsTest {

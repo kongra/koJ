@@ -2,6 +2,8 @@
 // Created 21.07.19
 package koJ;
 
+import koJ.unchecked.UncheckedRunnable;
+import koJ.unchecked.UncheckedSupplier;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 

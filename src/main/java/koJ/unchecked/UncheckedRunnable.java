@@ -1,6 +1,6 @@
 // Copyright (c) Konrad Grzanek
 // Created 19.07.19
-package koJ;
+package koJ.unchecked;
 
 import org.jetbrains.annotations.NotNull;
 
