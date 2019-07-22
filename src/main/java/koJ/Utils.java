@@ -3,7 +3,7 @@
 package koJ;
 
 import org.jetbrains.annotations.Contract;
-import org.jetbrains.annotations.Nullable;
+import org.jetbrains.annotations.NotNull;
 
 public class Utils {
 
@@ -18,13 +18,13 @@ public class Utils {
    * <p>
    * <code>throw sneakyThrow( some exception );</code>
    */
-  @Nullable
+  @NotNull
   @Contract("null -> fail")
-  public static RuntimeException sneakyThrow(Throwable t) {
+  static RuntimeException sneakyThrow(Throwable t) {
     // http://www.mail-archive.com/javaposse@googlegroups.com/msg05984.html
     if (t == null) throw new NullPointerException();
     Utils.sneakyThrow0(t);
-    return null;
+    return new RuntimeException();
   }
 
   @Contract("_ -> fail")

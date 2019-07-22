@@ -56,18 +56,24 @@ public class ChBench {
     blackhole.consume(s);
   }
 
+  @Benchmark
+  public static void chNonBlank7Bench(MyState state, Blackhole blackhole) {
+    var s = NonBlank.valueOf(state.s1);
+    s.ifPresent(blackhole::consume);
+  }
+
   @State(Scope.Thread)
   public static class MyState {
-    public String s1 = "a";
-    public String s2 = " a";
-    public String s3 = "a ";
-    public String s4 = " a ";
-    public String s5 = "A very long string with a lot of elements" +
+    final String s1 = "a";
+    final String s2 = " a";
+    final String s3 = "a ";
+    final String s4 = " a ";
+    final String s5 = "A very long string with a lot of elements" +
         "inside of it usbdyfbusdybf yubsdfyu vyusvdf uyvsd uvy";
 
-    public String s6 = " ".repeat(200) + s5;
+    final String s6 = " ".repeat(200) + s5;
 
-    public long l = 1;
+    final long l = 1;
   }
 
 }

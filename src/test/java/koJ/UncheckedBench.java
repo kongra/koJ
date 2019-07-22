@@ -54,9 +54,9 @@ public class UncheckedBench {
 
   @State(Scope.Thread)
   public static class MyState {
-    public long l = 1;
-    public double d = 3.14;
-    public int i = 1;
-    public String s = "a";
+    final long l = 1;
+    final double d = 3.14;
+    final int i = 1;
+    final String s = "a";
   }
 }

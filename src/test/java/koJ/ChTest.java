@@ -73,7 +73,7 @@ class ChTest {
     chNonBlank(" a");
     chNonBlank("a ");
     chNonBlank(" a ");
-    assertThrows(NullPointerException.class, () -> chNonBlank(null));
+    assertThrows(AssertionError.class, () -> chNonBlank(null));
     assertThrows(AssertionError.class, () -> chNonBlank(""));
     assertThrows(AssertionError.class, () -> chNonBlank(" "));
     assertThrows(AssertionError.class, () -> chNonBlank("\t"));

@@ -10,7 +10,7 @@ import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
 @BenchmarkMode(Mode.AverageTime)
-@OutputTimeUnit(TimeUnit.MICROSECONDS)
+@OutputTimeUnit(TimeUnit.NANOSECONDS)
 public class StreamsBench {
 
   @Benchmark
@@ -27,7 +27,7 @@ public class StreamsBench {
   public static void streamBench(MyState state, Blackhole blackhole) {
     long sum = LongStream.iterate(1L, i -> i + 1)
         .limit(state.n)
-        .reduce(0L, (i, j) -> i + j);
+        .reduce(0L, Long::sum);
     state.result = sum;
     blackhole.consume(sum);
   }
@@ -46,15 +46,15 @@ public class StreamsBench {
   public static void streamLongBench(MyState state, Blackhole blackhole) {
     long sum = Stream.iterate(1L, i -> i + 1)
         .limit(state.n)
-        .reduce(0L, (i, j) -> i + j);
+        .reduce(0L, Long::sum);
     state.result = sum;
     blackhole.consume(sum);
   }
 
   @State(Scope.Thread)
   public static class MyState {
-    public long n = 10_000;
-    public long result = 0;
+    final long n = 100;
+    long result = 0;
   }
 
 }

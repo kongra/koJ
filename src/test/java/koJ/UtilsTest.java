@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import static koJ.Delay.delayUnchecked;
 import static koJ.unchecked.UncheckedRunnable.unchecked;
 import static koJ.unchecked.UncheckedSupplier.unchecked;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class UtilsTest {
 
@@ -33,12 +33,12 @@ class UtilsTest {
       return 2;
     });
 
-    assertEquals(value.isPending(), true);
-    assertEquals(value.isRealized(), false);
+    assertTrue(value.isPending());
+    assertFalse(value.isRealized());
     assertEquals(value.deref(), 2);
 
-    assertEquals(value.isPending(), false);
-    assertEquals(value.isRealized(), true);
+    assertFalse(value.isPending());
+    assertTrue(value.isRealized());
     assertEquals(value.deref(), 2);
   }
 
@@ -48,11 +48,15 @@ class UtilsTest {
     assertEquals(s.deref(), "Aaa");
     s.binding("Bbb", () -> {
       assertEquals(s.deref(), "Bbb");
-      s.binding("Ccc", () -> {
-        assertEquals(s.deref(), "Ccc");
-      });
+      s.binding("Ccc", () -> assertEquals(s.deref(), "Ccc"));
       assertEquals(s.deref(), "Bbb");
     });
     assertEquals(s.deref(), "Aaa");
+  }
+
+  @Test
+  void nonBlank() {
+    var s = NonBlank.valueOf("aaa");
+    assertTrue(s.isPresent());
   }
 }

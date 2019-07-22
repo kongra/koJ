@@ -13,16 +13,16 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
-public class JmhRunnerTest {
+class JmhRunnerTest {
 
   private static final List<Class> BENCH_CLASSES = List.of(
       // ChBench.class
-      // StreamsBench.class
-      UncheckedBench.class
+      StreamsBench.class
+      // UncheckedBench.class
   );
 
   @Test
-  public void runJmhBenchmarks() throws RunnerException {
+  void runJmhBenchmarks() throws RunnerException {
     var opts = new OptionsBuilder()
         .warmupIterations(3)
         .measurementIterations(3)

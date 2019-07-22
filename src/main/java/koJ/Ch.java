@@ -3,7 +3,6 @@
 package koJ;
 
 import org.jetbrains.annotations.Contract;
-import org.jetbrains.annotations.NotNull;
 
 public class Ch {
 
@@ -61,8 +60,8 @@ public class Ch {
   }
 
   @Contract("_ -> param1")
-  public static String chNonBlank(@NotNull String s) {
-    if (s.isBlank()) throw new AssertionError();
+  public static String chNonBlank(String s) {
+    if (s == null || s.isBlank()) throw new AssertionError();
     return s;
   }
 

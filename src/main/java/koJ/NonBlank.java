@@ -38,7 +38,7 @@ public class NonBlank implements Deref<String> {
 
   @Contract(value = "null -> false", pure = true)
   @Override
-  public boolean equals(Object o) {
+  public final boolean equals(Object o) {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
     NonBlank nonBlank = (NonBlank) o;
@@ -46,7 +46,7 @@ public class NonBlank implements Deref<String> {
   }
 
   @Override
-  public int hashCode() {
+  public final int hashCode() {
     return Objects.hash(s);
   }
 
