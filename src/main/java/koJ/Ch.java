@@ -3,6 +3,10 @@
 package koJ;
 
 import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
+
+import java.util.function.IntUnaryOperator;
+import java.util.function.LongUnaryOperator;
 
 public class Ch {
 
@@ -59,7 +63,51 @@ public class Ch {
     throw new AssertionError();
   }
 
-  @Contract("_ -> param1")
+  public static void validateRange(long start, long end) {
+    if (start > end) throw new IllegalArgumentException(
+        "start > end with start=" + start + ", end=" + end);
+  }
+
+  public static void validateRange(int start, int end) {
+    if (start > end) throw new IllegalArgumentException(
+        "start > end with start=" + start + ", end=" + end);
+  }
+
+  @Contract(value = "_, _, _ -> param3", pure = true)
+  private static long chRange0(long start, long end, long l) {
+    if(start <= l && l <= end) return l;
+    throw new AssertionError();
+  }
+
+  @Contract(value = "_, _, _ -> param3", pure = true)
+  private static int chRange0(int start, int end, int i) {
+    if(start <= i && i <= end) return i;
+    throw new AssertionError();
+  }
+
+  public static long chRange(long start, long end, long l) {
+    validateRange(start, end);
+    return chRange0(start, end, l);
+  }
+
+  @NotNull
+  public static LongUnaryOperator chRange(long start, long end) {
+    validateRange(start, end);
+    return l -> chRange0(start, end, l);
+  }
+
+  public static int chRange(int start, int end, int i) {
+    validateRange(start, end);
+    return chRange0(start, end, i);
+  }
+
+  @NotNull
+  public static IntUnaryOperator chRange(int start, int end) {
+    validateRange(start, end);
+    return i -> chRange0(start, end, i);
+  }
+
+  @Contract("null -> fail")
   public static String chNonBlank(String s) {
     if (s == null || s.isBlank()) throw new AssertionError();
     return s;

@@ -27,7 +27,7 @@ class JmhRunnerTest {
         .warmupIterations(3)
         .measurementIterations(3)
         .forks(1)
-        .jvmArgsAppend("-server", "-Xms1024m", "-Xmx1024m");
+        .jvmArgsAppend("-server", "-Xms256m", "-Xmx1024m");
 
     BENCH_CLASSES.forEach(c -> opts.include(c.getSimpleName()));
 

@@ -68,6 +68,27 @@ class ChTest {
   }
 
   @Test
+  void chRangeInt1() {
+    chRange(0, 0, 0);
+    chRange(1, 1, 1);
+    chRange(0, 2, 0);
+    chRange(0, 2, 1);
+    chRange(0, 2, 2);
+    assertThrows(AssertionError.class, () -> chRange(0, 2, -1));
+    assertThrows(AssertionError.class, () -> chRange(0, 2, 3));
+    assertThrows(IllegalArgumentException.class, () -> chRange(0, -1, 3));
+
+    var chCustom = chRange(0, 2);
+    chCustom.applyAsInt(0);
+    chCustom.applyAsInt(1);
+    chCustom.applyAsInt(2);
+
+    assertThrows(AssertionError. class, () -> chRange(0, 2).applyAsInt(-1));
+    assertThrows(AssertionError. class, () -> chRange(0, 2).applyAsInt(3));
+    assertThrows(IllegalArgumentException.class, () -> chRange(0, -1));
+  }
+
+  @Test
   void chNonBlank0() {
     chNonBlank("a");
     chNonBlank(" a");
