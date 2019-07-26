@@ -2,11 +2,11 @@
 // Created 22.07.19
 package koJ;
 
+import io.vavr.control.Option;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
-import java.util.Optional;
 
 public class NonBlank implements Deref<String> {
 
@@ -19,11 +19,11 @@ public class NonBlank implements Deref<String> {
 
   @NotNull
   @Contract(value = "_ -> new", pure = true)
-  public static Optional<NonBlank> valueOf(String s) {
+  public static Option<NonBlank> valueOf(String s) {
     if (s == null || s.isBlank())
-      return Optional.empty();
+      return Option.none();
 
-    return Optional.of(new NonBlank(s));
+    return Option.of(new NonBlank(s));
   }
 
   @Override

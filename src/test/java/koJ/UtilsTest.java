@@ -57,6 +57,6 @@ class UtilsTest {
   @Test
   void nonBlank() {
     var s = NonBlank.valueOf("aaa");
-    assertTrue(s.isPresent());
+    assertTrue(s.isDefined());
   }
 }

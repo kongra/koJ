@@ -58,8 +58,8 @@ public class ChBench {
 
   @Benchmark
   public static void chNonBlank7Bench(MyState state, Blackhole blackhole) {
-    var s = NonBlank.valueOf(state.s1);
-    s.ifPresent(blackhole::consume);
+    var nonBlank = NonBlank.valueOf(state.s1);
+    nonBlank.peek(s -> blackhole.consume(s.deref()));
   }
 
   @State(Scope.Thread)
