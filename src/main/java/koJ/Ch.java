@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.function.IntUnaryOperator;
 import java.util.function.LongUnaryOperator;
 
-public class Ch {
+public final class Ch {
 
   @Contract(value = " -> fail", pure = true)
   private Ch() {

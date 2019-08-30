@@ -5,7 +5,7 @@ package koJ;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
-public class Utils {
+public final class Utils {
 
   @Contract(value = " -> fail", pure = true)
   private Utils() {

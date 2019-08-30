@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
-public class NonBlank implements Deref<String> {
+public final class NonBlank implements Deref<String> {
 
   private final String s;
 

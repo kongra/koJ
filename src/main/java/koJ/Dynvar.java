@@ -10,7 +10,7 @@ import org.jetbrains.annotations.NotNull;
 import java.util.ArrayDeque;
 import java.util.function.Supplier;
 
-public class Dynvar<T> implements Deref<T> {
+public final class Dynvar<T> implements Deref<T> {
 
   private final ThreadLocal<ArrayDeque<T>> localStacks =
       ThreadLocal.withInitial(ArrayDeque::new);
