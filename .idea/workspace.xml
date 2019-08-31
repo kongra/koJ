@@ -5,9 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/koJ/Ch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/koJ/Ch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/koJ/Delay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/koJ/Delay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/koJ/Dynvar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/koJ/Dynvar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/koJ/NonBlank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/koJ/NonBlank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/koJ/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/koJ/Utils.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

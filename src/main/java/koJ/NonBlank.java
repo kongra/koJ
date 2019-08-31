@@ -26,11 +26,13 @@ public final class NonBlank implements Deref<String> {
     return Option.of(new NonBlank(s));
   }
 
+  @Contract(pure = true)
   @Override
   public String deref() {
     return s;
   }
 
+  @Contract(pure = true)
   @Override
   public String toString() {
     return deref();
@@ -45,9 +47,10 @@ public final class NonBlank implements Deref<String> {
     return s.equals(nonBlank.s);
   }
 
+  @Contract(pure = true)
   @Override
   public final int hashCode() {
-    return Objects.hash(s);
+    return Objects.hash(deref());
   }
 
 }

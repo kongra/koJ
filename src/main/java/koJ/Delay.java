@@ -58,6 +58,7 @@ public final class Delay<T> implements Supplier<T>, Deref<T>, Pending {
     return deref();
   }
 
+  @Contract(pure = true)
   @Override
   public boolean isRealized() {
     return supplier == null;

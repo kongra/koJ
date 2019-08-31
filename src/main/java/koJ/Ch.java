@@ -63,11 +63,13 @@ public final class Ch {
     throw new AssertionError();
   }
 
+  @Contract(pure = true)
   public static void validateRange(long start, long end) {
     if (start > end) throw new IllegalArgumentException(
         "start > end with start=" + start + ", end=" + end);
   }
 
+  @Contract(pure = true)
   public static void validateRange(int start, int end) {
     if (start > end) throw new IllegalArgumentException(
         "start > end with start=" + start + ", end=" + end);
@@ -85,29 +87,33 @@ public final class Ch {
     throw new AssertionError();
   }
 
+  @Contract(pure = true)
   public static long chRange(long start, long end, long l) {
     validateRange(start, end);
     return chRange0(start, end, l);
   }
 
+  @Contract(pure = true)
   @NotNull
   public static LongUnaryOperator chRange(long start, long end) {
     validateRange(start, end);
     return l -> chRange0(start, end, l);
   }
 
+  @Contract(pure = true)
   public static int chRange(int start, int end, int i) {
     validateRange(start, end);
     return chRange0(start, end, i);
   }
 
+  @Contract(pure = true)
   @NotNull
   public static IntUnaryOperator chRange(int start, int end) {
     validateRange(start, end);
     return i -> chRange0(start, end, i);
   }
 
-  @Contract("null -> fail")
+  @Contract(value = "null -> fail", pure = true)
   public static String chNonBlank(String s) {
     if (s == null || s.isBlank()) throw new AssertionError();
     return s;
