@@ -113,6 +113,7 @@ public final class Ch {
     return i -> chRange0(start, end, i);
   }
 
+  @NotNull
   @Contract(value = "null -> fail", pure = true)
   public static String chNonBlank(String s) {
     if (s == null || s.isBlank()) throw new AssertionError();

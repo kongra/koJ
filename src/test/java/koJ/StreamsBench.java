@@ -2,6 +2,7 @@
 // Created 22.07.19
 package koJ;
 
+import org.jetbrains.annotations.NotNull;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.infra.Blackhole;
 
@@ -14,9 +15,10 @@ import java.util.stream.Stream;
 public class StreamsBench {
 
   @Benchmark
-  public static void iterBench(MyState state, Blackhole blackhole) {
+  public static void iterBench(@NotNull MyState state,
+                               @NotNull Blackhole blackhole) {
     long sum = 0;
-    for (long i = 0; i < state.n; i++) {
+    for (long i = state.start; i < state.n; i++) {
       sum += i;
     }
     state.result = sum;
@@ -24,8 +26,9 @@ public class StreamsBench {
   }
 
   @Benchmark
-  public static void streamBench(MyState state, Blackhole blackhole) {
-    long sum = LongStream.iterate(1L, i -> i + 1)
+  public static void streamBench(@NotNull MyState state,
+                                 @NotNull Blackhole blackhole) {
+    long sum = LongStream.iterate(state.start, i -> i + 1)
         .limit(state.n)
         .reduce(0L, Long::sum);
     state.result = sum;
@@ -33,9 +36,10 @@ public class StreamsBench {
   }
 
   @Benchmark
-  public static void iterLongBench(MyState state, Blackhole blackhole) {
+  public static void iterLongBench(@NotNull MyState state,
+                                   @NotNull Blackhole blackhole) {
     Long sum = 0L;
-    for (Long i = 0L; i < state.n; i++) {
+    for (Long i = state.start; i < state.n; i++) {
       sum += i;
     }
     state.result = sum;
@@ -43,8 +47,9 @@ public class StreamsBench {
   }
 
   @Benchmark
-  public static void streamLongBench(MyState state, Blackhole blackhole) {
-    long sum = Stream.iterate(1L, i -> i + 1)
+  public static void streamLongBench(@NotNull MyState state,
+                                     @NotNull Blackhole blackhole) {
+    long sum = Stream.iterate(state.start, i -> i + 1)
         .limit(state.n)
         .reduce(0L, Long::sum);
     state.result = sum;
@@ -53,7 +58,8 @@ public class StreamsBench {
 
   @State(Scope.Thread)
   public static class MyState {
-    final long n = 100;
+    final long start = 200;
+    final long n = 300;
     long result = 0;
   }
 

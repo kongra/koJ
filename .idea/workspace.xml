@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3641079f-504a-410b-90aa-be632148526d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/koJ.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/koJ/Ch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/koJ/Ch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/koJ/Delay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/koJ/Delay.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/koJ/NonBlank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/koJ/NonBlank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/koJ/StreamsBench.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/koJ/StreamsBench.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,8 +51,14 @@
   </component>
   <component name="ProjectId" id="1OXQs6amQRcHjcbsKOXRvjEEwIG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -69,18 +76,6 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="JUnit.UtilsTest">
     <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
@@ -206,6 +201,20 @@
       </map>
     </option>
   </component>
+  <component name="WindowStateProjectService">
+    <state x="304" y="25" width="1024" height="843" key="SettingsEditor" timestamp="1583060305674">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state x="304" y="25" width="1024" height="843" key="SettingsEditor/0.0.1600.870/0.0.1600.870@0.0.1600.870" timestamp="1583060305674" />
+    <state x="493" y="261" key="com.intellij.ide.util.TipDialog" timestamp="1583060212853">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state x="493" y="261" key="com.intellij.ide.util.TipDialog/0.0.1600.870/0.0.1600.870@0.0.1600.870" timestamp="1583060212853" />
+    <state x="464" y="81" width="672" height="676" key="search.everywhere.popup" timestamp="1583061223935">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state x="464" y="81" width="672" height="676" key="search.everywhere.popup/0.0.1600.870/0.0.1600.870@0.0.1600.870" timestamp="1583061223935" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -220,78 +229,5 @@
     <SUITE FILE_PATH="coverage/koJ$DelayTest.ic" NAME="DelayTest Coverage Results" MODIFIED="1563564694628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>koJ.*</FILTER>
     </SUITE>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>koJ</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
