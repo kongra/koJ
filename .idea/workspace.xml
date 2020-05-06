@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3641079f-504a-410b-90aa-be632148526d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,10 +189,18 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="395" y="78" width="800" height="710" key="#Plugins" timestamp="1588763541521">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state x="395" y="78" width="800" height="710" key="#Plugins/0.0.1600.870@0.0.1600.870" timestamp="1588763541521" />
     <state x="283" y="11" width="1024" height="843" key="#Project_Structure" timestamp="1588761428617">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="283" y="11" width="1024" height="843" key="#Project_Structure/0.0.1600.870@0.0.1600.870" timestamp="1588761428617" />
+    <state x="483" y="172" width="624" height="522" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1588763463544">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state x="483" y="172" width="624" height="522" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1600.870@0.0.1600.870" timestamp="1588763463544" />
     <state width="1554" height="218" key="GridCell.Tab.0.bottom" timestamp="1588763355169">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
