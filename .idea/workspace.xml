@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3641079f-504a-410b-90aa-be632148526d" name="Default Changelist" comment="" />
+    <list default="true" id="3641079f-504a-410b-90aa-be632148526d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,22 +40,15 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1OXQs6amQRcHjcbsKOXRvjEEwIG" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
@@ -172,9 +170,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -193,8 +189,29 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="283" y="11" width="1024" height="843" key="#Project_Structure" timestamp="1588761428617">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state x="283" y="11" width="1024" height="843" key="#Project_Structure/0.0.1600.870@0.0.1600.870" timestamp="1588761428617" />
+    <state width="1554" height="218" key="GridCell.Tab.0.bottom" timestamp="1588763355169">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state width="1554" height="218" key="GridCell.Tab.0.bottom/0.0.1600.870@0.0.1600.870" timestamp="1588763355169" />
+    <state width="1554" height="218" key="GridCell.Tab.0.center" timestamp="1588763355169">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state width="1554" height="218" key="GridCell.Tab.0.center/0.0.1600.870@0.0.1600.870" timestamp="1588763355169" />
+    <state width="1554" height="218" key="GridCell.Tab.0.left" timestamp="1588763355168">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state width="1554" height="218" key="GridCell.Tab.0.left/0.0.1600.870@0.0.1600.870" timestamp="1588763355168" />
+    <state width="1554" height="218" key="GridCell.Tab.0.right" timestamp="1588763355169">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state width="1554" height="218" key="GridCell.Tab.0.right/0.0.1600.870@0.0.1600.870" timestamp="1588763355169" />
     <state x="304" y="25" width="1024" height="843" key="SettingsEditor" timestamp="1583060305674">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
