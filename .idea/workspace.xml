@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3641079f-504a-410b-90aa-be632148526d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/package.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,12 +40,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1OXQs6amQRcHjcbsKOXRvjEEwIG" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -148,20 +153,6 @@
     </task>
     <servers />
   </component>
-  <component name="TestHistory">
-    <history-entry file="DelayTest - 2019.07.19 at 21h 24m 12s.xml">
-      <configuration name="DelayTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DelayTest - 2019.07.19 at 21h 31m 37s.xml">
-      <configuration name="DelayTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UtilsTest - 2019.07.20 at 10h 32m 16s.xml">
-      <configuration name="UtilsTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="UtilsTest - 2019.07.20 at 10h 35m 21s.xml">
-      <configuration name="UtilsTest" configurationId="JUnit" />
-    </history-entry>
-  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -188,6 +179,9 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="395" y="78" width="800" height="710" key="#Plugins" timestamp="1588763541521">
       <screen x="0" y="0" width="1600" height="870" />
@@ -201,22 +195,22 @@
       <screen x="0" y="0" width="1600" height="870" />
     </state>
     <state x="483" y="172" width="624" height="522" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1600.870@0.0.1600.870" timestamp="1588763463544" />
-    <state width="1554" height="218" key="GridCell.Tab.0.bottom" timestamp="1588763355169">
+    <state width="1554" height="218" key="GridCell.Tab.0.bottom" timestamp="1589102965662">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="1554" height="218" key="GridCell.Tab.0.bottom/0.0.1600.870@0.0.1600.870" timestamp="1588763355169" />
-    <state width="1554" height="218" key="GridCell.Tab.0.center" timestamp="1588763355169">
+    <state width="1554" height="218" key="GridCell.Tab.0.bottom/0.0.1600.870@0.0.1600.870" timestamp="1589102965662" />
+    <state width="1554" height="218" key="GridCell.Tab.0.center" timestamp="1589102965661">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="1554" height="218" key="GridCell.Tab.0.center/0.0.1600.870@0.0.1600.870" timestamp="1588763355169" />
-    <state width="1554" height="218" key="GridCell.Tab.0.left" timestamp="1588763355168">
+    <state width="1554" height="218" key="GridCell.Tab.0.center/0.0.1600.870@0.0.1600.870" timestamp="1589102965661" />
+    <state width="1554" height="218" key="GridCell.Tab.0.left" timestamp="1589102965660">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="1554" height="218" key="GridCell.Tab.0.left/0.0.1600.870@0.0.1600.870" timestamp="1588763355168" />
-    <state width="1554" height="218" key="GridCell.Tab.0.right" timestamp="1588763355169">
+    <state width="1554" height="218" key="GridCell.Tab.0.left/0.0.1600.870@0.0.1600.870" timestamp="1589102965660" />
+    <state width="1554" height="218" key="GridCell.Tab.0.right" timestamp="1589102965661">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
-    <state width="1554" height="218" key="GridCell.Tab.0.right/0.0.1600.870@0.0.1600.870" timestamp="1588763355169" />
+    <state width="1554" height="218" key="GridCell.Tab.0.right/0.0.1600.870@0.0.1600.870" timestamp="1589102965661" />
     <state x="304" y="25" width="1024" height="843" key="SettingsEditor" timestamp="1583060305674">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
@@ -226,6 +220,10 @@
     </state>
     <state x="493" y="261" key="com.intellij.ide.util.TipDialog/0.0.1600.870/0.0.1600.870@0.0.1600.870" timestamp="1583060212853" />
     <state x="493" y="261" key="com.intellij.ide.util.TipDialog/0.0.1600.870@0.0.1600.870" timestamp="1583093853002" />
+    <state x="175" y="138" width="1239" height="589" key="new project wizard" timestamp="1589097339491">
+      <screen x="0" y="0" width="1600" height="870" />
+    </state>
+    <state x="175" y="138" width="1239" height="589" key="new project wizard/0.0.1600.870@0.0.1600.870" timestamp="1589097339491" />
     <state x="464" y="81" width="672" height="676" key="search.everywhere.popup" timestamp="1583061223935">
       <screen x="0" y="0" width="1600" height="870" />
     </state>
